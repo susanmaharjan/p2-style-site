@@ -1,19 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <html>
 
 <head>
+
+
     <meta charset="utf-8">
     <meta name="Author" content="Susan Maharjan">
     <meta name="description" content="This is the developer page for Susan Maharjan">
     <title>Susan Website</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- My custom css-->
     <link href="maharjan.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav >
+
+    <nav>
 
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -21,24 +34,36 @@
             <li><a href="calculation.html">Conversion</a></li>
         </ul>
 
-</nav>
+    </nav>
+
     <main>
-        <div class="container-fluid">
-            <article>
-                <section>
-                    <h3>Convert miles to kilometer</h3>
-                    <p>Enter distance in miles</p>
-                    <input id ="input" type="number" placeholder="miles">
-                    <button type="button" class="btn-primary">Convert</button>
-                    <p>kilometer</p>
-                </section>
-            </article>
+        <h1>Weight Converter</h1>
+        <p>Type a value in the Pounds field to convert the value to Kilograms:</p>
+
+        <p>
+            <label>Pounds</label>
+            <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)"
+                onchange="weightConverter(this.value)">
+        </p>
+        <p>Kilograms: <span id="outputKilograms"></span></p>
+
+        <script>
+            function weightConverter(valNum) {
+                document.getElementById("outputKilograms").innerHTML = valNum / 2.2046;
+            }
+        </script>
+        <hr>
+        <aside>
+            <a class="as" href="https://github.com/susanmaharjan"><i class="fab fa-github-alt"></i></i>Github</a>
+
+            <br>
+            <a href="https://www.linkedin.com/in/susan-maharjan-b63417161/"> <i class="fab fa-linkedin"></i>LinkedIn</a>
+            <br><br>
+        </aside>
+
         </div>
     </main>
-
-
-
-    <div class="container-fluid">
+    <div>
         <footer>&copy; Susan Maharjan 2020</footer>
     </div>
 
@@ -53,7 +78,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
-</body>
+
+
 </body>
 
 </html>

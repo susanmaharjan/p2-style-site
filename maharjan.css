@@ -12,6 +12,7 @@ article{
 
 body{
     background-color: chocolate;
+    font-size: large;
 }
 ul {
     list-style-type: none;
